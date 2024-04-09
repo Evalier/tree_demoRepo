@@ -74,7 +74,9 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   in-order traversal
 	   */
 	   public void inOrderTraversal(Node root){
-
+       inOrderTraversal(root.left);
+       System.out.println(root.value + " ");
+       inOrderTraversal(root.right);
 	   }
 	   
 	   
