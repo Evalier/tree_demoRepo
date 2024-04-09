@@ -86,8 +86,10 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-
-		   
+       postOrderTraversal(root.left);
+       postOrderTraversal(root.right);
+       System.out.println(root.value + " ");
+		  
 	   }
 	   
 	   
