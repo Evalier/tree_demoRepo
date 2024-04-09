@@ -57,12 +57,14 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	      }//closing main if-else 
 	   }
 	   
-	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
+	   /**
+	   * Pre-order traversal
+	   * Prints the value of every node in preorder
+	   * 
+	   * @param root the root node of the tree
 	   */
 	   public void preOrderTraversal(Node root){
-	      if(root != null){
+	      if (root != null){
 	         System.out.print(root.value + " ");
 	         preOrderTraversal(root.left);
 	         preOrderTraversal(root.right);
@@ -70,8 +72,10 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   }
 	   
 	   
-	   /*
-	   in-order traversal
+	   /**
+	   * In-order traversal
+	   * 
+	   * @param root the root node of the tree
 	   */
 	   public void inOrderTraversal(Node root){
        if (root != null) {
@@ -83,10 +87,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   
 	   
 	   
-	   /*
-	   post-order traversal
+	   /**
+	   * Post-order traversal
+	   * 
+	   * @param root the root node of the tree
 	   */
-	  
 	   public void postOrderTraversal(Node root){
        if (root != null) {
           postOrderTraversal(root.left);
@@ -98,9 +103,12 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a specific value
+	   /**
+	   * A method to find the node in the tree with a specific value.
+	   * 
+	   * @param root the root node of the tree
+	   * @param key the specific value to be found
+	   * @return true if the value is found, false otherwise
 	   */
 	   public boolean find(Node root, int key){
        if (root != null) {
@@ -116,9 +124,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   
 	   
 	   
-	   /*
-	   a method to find the node in the tree
-	   with a smallest key
+	   /**
+	   * A method to find the node in the tree with the smallest key.
+	   * 
+	   * @param root the root node of the tree
+	   * @return the smallest key in the tree
 	   */
 	   public int getMin(Node root){
        if (root != null && root.left != null) {
@@ -128,9 +138,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   }
 	  
 	  
-	   /*
-	   a method to find the node in the tree
-	   with a largest key
+	   /**
+	   * A method to find the node in the tree with the largest key.
+	   * 
+	   * @param root the root node of the tree
+	   * @return the largest key in the tree
 	   */
 	   public int getMax(Node root){
        if (root != null && root.right != null) {
