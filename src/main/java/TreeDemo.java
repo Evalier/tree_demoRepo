@@ -121,10 +121,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         //implement in here
-	      return 0; 
+       if (root != null && root.left != null) {
+         return getMin(root.left);
+       }
+       return root.value;
 	   }
-	  
 	  
 	  
 	   /*
@@ -132,8 +133,7 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
-       return 0; 
+       
 	   }
 	   
 	   
@@ -191,6 +191,8 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	      System.out.println();
 
         System.out.println(t1.find(t1.root, 90));
+
+       System.out.println(t1.getMin(t1.root));
 	           
 	      
 	   }  
