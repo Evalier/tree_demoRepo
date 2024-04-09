@@ -74,9 +74,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   in-order traversal
 	   */
 	   public void inOrderTraversal(Node root){
-       inOrderTraversal(root.left);
-       System.out.println(root.value + " ");
-       inOrderTraversal(root.right);
+       if (root != null) {
+          inOrderTraversal(root.left);
+          System.out.print(root.value + " ");
+          inOrderTraversal(root.right);
+       }
 	   }
 	   
 	   
@@ -86,10 +88,12 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-       postOrderTraversal(root.left);
-       postOrderTraversal(root.right);
-       System.out.println(root.value + " ");
-		  
+       if (root != null) {
+          postOrderTraversal(root.left);
+          postOrderTraversal(root.right);
+          System.out.print(root.value + " ");
+
+       }
 	   }
 	   
 	   
@@ -99,8 +103,15 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   with a specific value
 	   */
 	   public boolean find(Node root, int key){
-		 //implement in here
-		  
+       if (root != null) {
+          if (root.value == key) {
+            return true; 
+          }
+          if (find(root.left, key) || find(root.right, key)) {
+            return true;
+          }
+       }
+       return false; 
 	   }
 	   
 	   
@@ -111,7 +122,7 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   */
 	   public int getMin(Node root){
          //implement in here
-	      
+	      return 0; 
 	   }
 	  
 	  
@@ -122,6 +133,7 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   */
 	   public int getMax(Node root){
          //implement in here
+       return 0; 
 	   }
 	   
 	   
@@ -177,6 +189,8 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	      System.out.print("in-order :   ");
 	      t1.inOrderTraversal(t1.root);
 	      System.out.println();
+
+        System.out.println(t1.find(t1.root, 90));
 	           
 	      
 	   }  
