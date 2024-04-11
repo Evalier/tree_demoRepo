@@ -78,11 +78,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   * @param root the root node of the tree
 	   */
 	   public void inOrderTraversal(Node root){
-       if (root != null) {
-          inOrderTraversal(root.left);
-          System.out.print(root.value + " ");
-          inOrderTraversal(root.right);
-       }
+       		if (root != null) {
+          		inOrderTraversal(root.left);
+          		System.out.print(root.value + " ");
+          		inOrderTraversal(root.right);
+       		}
 	   }
 	   
 	   
@@ -93,12 +93,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   * @param root the root node of the tree
 	   */
 	   public void postOrderTraversal(Node root){
-       if (root != null) {
-          postOrderTraversal(root.left);
-          postOrderTraversal(root.right);
-          System.out.print(root.value + " ");
-
-       }
+       		if (root != null) {
+          		postOrderTraversal(root.left);
+          		postOrderTraversal(root.right);
+          		System.out.print(root.value + " ");
+       		}
 	   }
 	   
 	   
@@ -131,11 +130,11 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   * @return the smallest key in the tree
 	   */
 	   public int getMin(Node root){
-       if (root != null && root.left != null) {
-         return getMin(root.left);
-       }
-       return root.value;
-	   }
+       		if (root != null && root.left != null) {
+         		return getMin(root.left);
+       		}
+       		return root.value;
+	    }
 	  
 	  
 	   /**
@@ -145,10 +144,10 @@ class Node{ // Implement 6 different functions and commit them 6 different times
 	   * @return the largest key in the tree
 	   */
 	   public int getMax(Node root){
-       if (root != null && root.right != null) {
-         return getMax(root.right);
-       }
-       return root.value; 
+       		if (root != null && root.right != null) {
+         		return getMax(root.right);
+       		}
+       		return root.value; 
 	   }
 	   
 	   
